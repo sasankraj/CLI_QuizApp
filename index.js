@@ -7,55 +7,32 @@ const name = r.question("\nPlease enter your name : ");
 instructions(name);
 const questions = [
   {
-    question : 
-              "Which of the following is true about variable naming conventions in JavaScript ?",
-    options : 
-              [
-                "JavaScript variable names must begin with a letter or the underscore character",
-                "JavaScript variable names are case sensitive",
-                "Both of these",
-                "None of these"
-              ],
+    question : "Which of the following is true about variable naming conventions in JavaScript ?",
+    options : [ "JavaScript variable names must begin with a letter or the underscore character", "JavaScript variable names are case sensitive", "Both of these", "None of these" ],
     answer : 3
   },
 
   {
-    question : 
-              "Which of the following type of variable takes precedence over other if their names are same?",
-              
-    options :
-              [ "Local variable", "Global variable", "Reference variable", "Static variable" ],
-
+    question : "Which of the following type of variable takes precedence over other if their names are same?", 
+    options : [ "Local variable", "Global variable", "Reference variable", "Static variable" ],
     answer : 1
   },
 
   {
-    question : 
-              "Which of the following function of String object returns the character at the specified index?",
-
-    options : 
-              [ "charCodeAt()", "charAt()", "indexOf()", "console()" ],
-
+    question : "Which of the following function of String object returns the character at the specified index?",
+    options : [ "charCodeAt()", "charAt()", "indexOf()", "console()" ],
     answer : 2
   }, 
 
   {
-    question : 
-              "Which of the following function of Array object calls a function for each element in the array?",
-
-    options : 
-              [ "concat()", "every()", "forEach()", "filter()" ],
-
+    question : "Which of the following function of Array object calls a function for each element in the array?",
+    options : [ "concat()", "every()", "forEach()", "filter()" ],
     answer : 3
   },
 
   {
-    question : 
-              "Callbacks are _________ that are passed as arguments to another function.",
-
-    options : 
-              [ "Strings", "Variables", "Arrays", "Functions" ],
-
+    question : "Callbacks are _________ that are passed as arguments to another function.",
+    options : [ "Strings", "Variables", "Arrays", "Functions" ],
     answer : 4
   }
 
@@ -81,9 +58,9 @@ function display() {
   for(let i = 0; i < count; i++) {
     console.log();
     console.log("Q" + (i+1).toString() + ". " + questions[i]['question'] + '\n');
-    let lp = questions[i]['options'].length;
+    let optNum = questions[i]['options'].length;
     for(const opts of questions[i]['options']) {
-      console.log('(' + (questions[i]['options'].length - (lp--) + 1).toString() + ') ' + opts + '\n');
+      console.log('(' + (questions[i]['options'].length - (optNum--) + 1).toString() + ') ' + opts + '\n');
     }
     const choice = r.question("enter your choice : ");
     validate(i , choice);
